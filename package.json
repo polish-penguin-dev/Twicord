@@ -1,0 +1,21 @@
+{
+  "name": "twicord",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "The Easiest Way To Create Modern Discord Bots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "oceanic.js",
+    "easy",
+    "wrapper"
+  ],
+  "author": "Penguins184",
+  "license": "MIT",
+  "dependencies": {
+    "oceanic.js": "^1.11.2"
+  }
+}
