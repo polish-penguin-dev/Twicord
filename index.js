@@ -7,6 +7,7 @@
 
 import path from "path";
 import fs from "fs";
+import url from "url";
 import { InteractionTypes } from "oceanic.js";
 
 export class Twi {
@@ -45,7 +46,7 @@ export class Twi {
             console.log(`Twicord: Loading commands - ${files.join(", ")}`);
         
             for (const file of files) {
-                import(path.resolve(dir, file));
+                import(url.pathToFileURL(path.resolve(dir, file)).href);
             }
         });
     }
