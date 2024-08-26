@@ -11,7 +11,7 @@ import { Twi } from "twicord.js";
 const client = new Client({ auth: `Bot ${process.env.token}`, gateway: { intents: [...] } });
 const twi = new Twi(client);
 
-twi.cmdHandler("./cmds");
+twi.cmdhandler("./cmds");
 export { twi };
 ```
 
@@ -31,7 +31,8 @@ twi.slashcmd({
 twi.analogcmd({
     name: "!ping",
     run: function(message) {
+        //twi.message() = client.rest.channels.createMessage()
         twi.message(message.channel.id, { content: "Pong!" });
     }
-})
+});
 ```

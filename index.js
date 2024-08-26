@@ -5,6 +5,7 @@
     Made By Penguins184
 */
 
+import path from "path";
 import fs from "fs";
 import { InteractionTypes } from "oceanic.js";
 
@@ -44,7 +45,7 @@ export class Twi {
             console.log(`Twicord: Loading commands - ${files.join(", ")}`);
         
             for (const file of files) {
-                import(`${dir}/${file}`);
+                import(path.resolve(dir, file));
             }
         });
     }
