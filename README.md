@@ -8,8 +8,7 @@ Features:
 - Analog Commands
 - Component Handlers
 - Command Handler
-- Friendly Type Names (InteractionTypes, ApplicationCommandTypes)
-- Easy Colors
+- Easy Colors/OptionTypes (Lists)
 - Embed Builder
 
 index.js:
