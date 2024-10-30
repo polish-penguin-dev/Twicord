@@ -4,6 +4,7 @@
 
     Made By Penguins184
 */
+import * as lists from "./lists/lists.js";
 
 import path from "path";
 import fs from "fs";
@@ -12,6 +13,8 @@ import { InteractionTypes } from "oceanic.js";
 
 export class Twi {
     constructor(client) {
+        if(!client) return console.log(`Twicord: No client provided`);
+
         this.client = client;
         this.slashcmds = new Map();
         this.analogcmds = new Map();
@@ -69,4 +72,65 @@ export class Twi {
     message(id, content) {
         this.client.rest.channels.createMessage(id, content);
     }
+
+    color(string) {
+        if(!lists.colors.hasOwnProperty(string)) return console.log(`Twicord: Invalid color specified`);
+        
+        return parseInt(lists.colors[string], 16);
+    } 
+
+    optiontype(string) {
+        if(!lists.optiontypes.hasOwnProperty(string)) return console.log(`Twicord: Invalid optiontype specified`);
+        
+        return lists.optiontypes[string];
+    } 
+
+    embed() {
+        return new Embed();
+    }
 };
+
+class Embed {
+    constructor() {
+        this.embed = {
+            title: null,
+            description: null,
+            color: null,
+            image: {
+                url: null
+            },
+            footer: {
+                text: null
+            }
+        };
+    }
+
+    title(text) {
+        this.embed.title = text;
+        return this;
+    }
+
+    description(text) {
+        this.embed.description = text;
+        return this;
+    }
+
+    color(value) {
+        this.embed.color = value;
+        return this;
+    }
+
+    image(url) {
+        this.embed.image.url = url;
+        return this;
+    }
+
+    footer(text) {
+        this.embed.footer.text = text;
+        return this;
+    }
+
+    build() {
+        return this.embed;
+    }
+}

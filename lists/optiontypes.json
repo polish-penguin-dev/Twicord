@@ -1,0 +1,13 @@
+{
+    "attachment": 11,
+    "boolean": 5,
+    "channel": 7,
+    "integer": 4,
+    "mentionable": 9,
+    "number": 10,
+    "role": 8,
+    "string": 3,
+    "subcommand": 1,
+    "subcommand-group": 2,
+    "user": 6
+}

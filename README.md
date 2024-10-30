@@ -1,6 +1,16 @@
 # TwiCord
 
-An extremely simple oceanic.js wrapper that makes it easy to create analog and slash commands! 🌈
+An Extremely Simple Oceanic.js Wrapper That Makes It Easy To Create Analog And Slash Commands! 🌈
+
+Features:
+
+- Slash Commands
+- Analog Commands
+- Component Handlers
+- Command Handler
+- Friendly Type Names (InteractionTypes, ApplicationCommandTypes)
+- Easy Colors
+- Embed Builder
 
 index.js:
 
@@ -33,6 +43,38 @@ twi.analogcmd({
     run: function(message) {
         //twi.message() = client.rest.channels.createMessage()
         twi.message(message.channel.id, { content: "Pong!" });
+    }
+});
+```
+
+showcase:
+
+```js
+import { twi } from "../index.js";
+
+//Slash Command
+twi.slashcmd({
+    name: "cuckoo",
+    description: "Repeats!",
+    options: [
+        {
+            type: twi.optiontype("string"),
+            name: "message",
+            description: "Message To Repeat",
+            required: true
+        }
+    ],
+    run: async function(interaction) {
+        const msg = interaction.data.options.getString("message");
+
+        //Embed Builder
+        const response = new twi.embed()
+        .title("Repeat")
+        .description(msg)
+        .color(twi.color("blurple")) //twi.x(...) Lists
+        .build();
+
+        interaction.createMessage({ embeds: [response] });
     }
 });
 ```

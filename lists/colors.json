@@ -1,0 +1,24 @@
+{
+    "red": "0xFF0000",
+    "pastel_red": "0xFF6961",
+    "orange": "0xFFA500",
+    "pastel_orange": "0xFFD1A9",
+    "yellow": "0xFFFF00",
+    "pastel_yellow": "0xFDFD96",
+    "green": "0x008000",
+    "pastel_green": "0x77DD77",
+    "blue": "0x0000FF",
+    "pastel_blue": "0xAEC6CF",
+    "purple": "0x800080",
+    "pastel_purple": "0xCBAACB",
+    "pink": "0xFFC0CB",
+    "pastel_pink": "0xFFB7B2",
+    "brown": "0xA52A2A",
+    "pastel_brown": "0xD2B48C",
+    "black": "0x000000",
+    "gray": "0x808080",
+    "white": "0xFFFFFF",
+    "blurple": "0x7289DA",
+    "new_blurple": "0x5865F2"
+}
+  
