@@ -67,7 +67,7 @@ twi.slashcmd({
         const msg = interaction.data.options.getString("message");
 
         //Embed Builder
-        const response = new twi.embed()
+        const response = twi.embed()
         .title("Repeat")
         .description(msg)
         .color(twi.color("blurple")) //twi.x(...) Lists
