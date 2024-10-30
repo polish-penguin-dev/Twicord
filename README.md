@@ -1,6 +1,9 @@
 # TwiCord
 
-An Extremely Simple Oceanic.js Wrapper That Makes It Easy To Create Analog And Slash Commands! 🌈
+- An Extremely Simple Oceanic.js Wrapper That Makes It Easy To Create Analog And Slash Commands! 🌈
+- NOT Actively Maintained! Last Edited On Wed, Oct 30 2024.
+- Uses EXPERIMENTAL IMPORTS. Run `[node/bun/deno] --no-warnings .` To Fix!
+- Bun Runtime Is Recommended.
 
 Features:
 
@@ -101,3 +104,7 @@ twi.handlecomponents({
     }
 });
 ```
+
+NPM: https://npmjs.com/package/twicord.js,
+
+JSR: https://jsr.io/@twicordjs/core
