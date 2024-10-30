@@ -1,0 +1,14 @@
+{
+    "actionrow": 1,
+    "button": 2,
+    "channel-select": 8,
+    "content-inventory-entry": 16,
+    "media-gallery": 12,
+    "mentionable-select": 7,
+    "role-select": 6,
+    "separator": 14,
+    "string-select": 3,
+    "text": 10,
+    "text-input": 4,
+    "user-select": 5
+}

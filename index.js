@@ -85,6 +85,12 @@ export class Twi {
         return lists.optiontypes[string];
     } 
 
+    componenttype(string) {
+        if(!lists.componenttypes.hasOwnProperty(string)) return console.log(`Twicord: Invalid componenttype specified`);
+        
+        return lists.componenttypes[string];
+    } 
+
     embed() {
         return new Embed();
     }

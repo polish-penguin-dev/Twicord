@@ -73,7 +73,28 @@ twi.slashcmd({
         .color(twi.color("blurple")) //twi.x(...) Lists
         .build();
 
-        interaction.createMessage({ embeds: [response] });
+        interaction.createMessage({ 
+            embeds: [response],
+            components: [
+                {
+                    type: twi.componenttype("actionrow"),
+                    components: [
+                        {
+                            type: twi.componenttype("button"),
+                            customID: "info"
+                            label: "Information"
+                        }
+                    ]
+                }
+            ]
+        });
+    }
+});
+
+twi.handlecomponents({
+    customid: "resend",
+    run: async function(interaction) {
+        await interaction.createFollowup("Made With Twicord.js + Oceanic.js")
     }
 });
 ```
